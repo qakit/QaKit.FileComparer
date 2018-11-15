@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.1;net461</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Library with some compare methods to compare pdf/xml/image/word etc files. Useful in testing which strategy based on comparing master vs actual result.</Description>
+    <PackageProjectUrl>http://github.com/qakit/QaKit.FileComparer</PackageProjectUrl>
+    <RepositoryUrl>http://github.com/qakit/QaKit.FileComparer</RepositoryUrl>
+    <PackageTags>qakit filecomparer filecomparing xmlcompare pdfcompare imagecompare wordcompare docxcompare</PackageTags>
+    <Authors>Andrey Egorov</Authors>
+    <Company>QaKit</Company>
+    <Copyright>Copyright 2018 (c) QaKit. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="XmlDiffPatch.Core">
+      <Version>1.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <PackageReference Include="XmlDiffPatch">
+      <Version>1.0.8.28</Version>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.8.1" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="7.9.0.1" />
+  </ItemGroup>
+
+</Project>
