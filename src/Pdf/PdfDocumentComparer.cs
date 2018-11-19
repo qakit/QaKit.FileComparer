@@ -48,6 +48,8 @@ namespace QaKit.FileComparer.PDF
 		{
 			var expectedPdfImagesOutputDir = new DirectoryInfo(Path.Combine(expectedPdfFile.Directory.FullName, $"{expectedPdfFile.Name}_Images"));
 			var actualPdfImagesOutputDir = new DirectoryInfo(Path.Combine(actualPdfFile.Directory.FullName, $"{actualPdfFile.Name}_Images"));
+			if (!expectedPdfImagesOutputDir.Exists) expectedPdfImagesOutputDir.Create();
+			if (!actualPdfImagesOutputDir.Exists) actualPdfImagesOutputDir.Create();
 
 			GenerateImagesFromPdf(expectedPdfFile, expectedPdfImagesOutputDir);
 			GenerateImagesFromPdf(actualPdfFile, actualPdfImagesOutputDir);
