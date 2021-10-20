@@ -4,12 +4,13 @@
     <TargetFrameworks>netcoreapp2.1;net461</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Library with some compare methods to compare pdf/xml/image/word etc files. Useful in testing which strategy based on comparing master vs actual result.</Description>
-    <PackageProjectUrl>http://github.com/qakit/QaKit.FileComparer</PackageProjectUrl>
-    <RepositoryUrl>http://github.com/qakit/QaKit.FileComparer</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/qakit/QaKit.FileComparer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/qakit/QaKit.FileComparer</RepositoryUrl>
     <PackageTags>qakit filecomparer filecomparing xmlcompare pdfcompare imagecompare wordcompare docxcompare</PackageTags>
     <Authors>Andrey Egorov</Authors>
     <Company>QaKit</Company>
     <Copyright>Copyright 2018 (c) QaKit. All rights reserved.</Copyright>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
@@ -22,6 +23,12 @@
     <PackageReference Include="XmlDiffPatch">
       <Version>1.0.8.28</Version>
     </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="packages\**" />
+    <EmbeddedResource Remove="packages\**" />
+    <None Remove="packages\**" />
   </ItemGroup>
   
   <ItemGroup>
