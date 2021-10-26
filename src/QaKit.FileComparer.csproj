@@ -10,7 +10,7 @@
     <Authors>Andrey Egorov</Authors>
     <Company>QaKit</Company>
     <Copyright>Copyright 2018 (c) QaKit. All rights reserved.</Copyright>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
